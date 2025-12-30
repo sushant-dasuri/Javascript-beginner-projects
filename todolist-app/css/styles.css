@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    display: flex;
+    padding : 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.todoApp {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+}
+
+.todoApp h1 {
+    color: #002765;
+    margin-bottom: 20px;
+}
+
+.todoApp img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
