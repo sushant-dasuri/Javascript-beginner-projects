@@ -3,6 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+   
 }
 
 .container {
@@ -10,9 +11,11 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #153677, #4e085f);
     display: flex;
+    flex: 1 1 auto;
     padding : 10px;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .todoApp {
@@ -37,6 +40,9 @@
     margin-left: 10px;
 }
 
+section {
+    width: 100%;
+}
 .row {
     display: flex;
     width: 100%;
@@ -73,6 +79,11 @@ button {
     border-radius: 40px;
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+}
+
 ul li {
     list-style: none;
     font-size: 17px;
@@ -80,6 +91,8 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    display: flex;
+    flex: 1;
 }
 
 ul li::before{
@@ -102,4 +115,49 @@ ul li.checked {
 
 ul li.checked::before{
     background-image: url('../img/checked.png');
+}
+
+.inputError{
+    border: 2px solid red;
+    border-radius: 30px;
+}
+
+.errorText{
+    color: red;
+    font-size: 14px;
+}
+
+ul.errorText li::before{
+    display: none;
+}
+
+ul li .closeButton {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width:40px;
+    height: 40px;
+    font-size: 22px;
+    color: #ff5945;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul li .closeButton:hover {
+    background: #edeef0;
+}
+
+
+p.errorDiv {
+    margin: 30px 0px;
+    width: 250px;
+    padding: 15px 10px;
+    display: block;
+    text-align: center;
+    border-radius: 2px;
+    background-color: #f90000;
+    border: 1px solid #EDD;
+    color: #ffffff;
+    display: none;
 }
